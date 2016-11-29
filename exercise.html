@@ -15,7 +15,8 @@ $(function(){
  for(var i = 0; i< items.length;i++){
  var name = items[i].Name;
  var imgURL = items[i].Picture1;
- $("#attractions").append('<div>'+items[i].Name+'</div><div><img src="'+imgURL+'" height="200" width="200"></div>');
+ $("#attractions").addClass("table");
+ $("#attractions").append('<div><table><tr><th>'+items[i].Name+' </th></tr></div><div><tr><th><img src="'+imgURL+'" height="200" width="200"></th></tr></table></div>');
  }
  },
  error: function(){
@@ -23,6 +24,21 @@ $(function(){
 });
 });
  </script>
+ <style>
+ .table, td, th {    
+     border: 1px solid black;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+ </style>
 </head>
 
 <body>
